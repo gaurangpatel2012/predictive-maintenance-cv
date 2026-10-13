@@ -78,7 +78,9 @@ with st.sidebar:
         st.error("No deployed models found in app/weights/. See README → Deployment.")
         st.stop()
     category = st.selectbox("Product line", list(deployed), format_func=lambda c: c.replace("_", " ").title())
-    model = st.selectbox("Model", deployed[category], format_func=lambda m: DISPLAY_NAMES.get(m, m))
+    options = deployed[category]
+    model = st.selectbox("Model", options, index=options.index("patchcore") if "patchcore" in options else 0,
+                         format_func=lambda m: DISPLAY_NAMES.get(m, m))
     st.caption("One model is resident at a time; switching reloads weights and the load time is shown.")
     if st.button("Reset defect-rate buffer"):
         st.session_state["history"].clear()
@@ -97,9 +99,14 @@ with col_in:
     data = upload.getvalue() if upload is not None else (
         (DEMO_DIR / demo).read_bytes() if demo and demo != "—" else None)
 
-pipe, load_ms = get_pipeline(category, model)
-first_use = st.session_state.get("resident") != (category, model)
-st.session_state["resident"] = (category, model)
+# load (and on first use download) the model only once there is an image to inspect
+pipe = load_ms = None
+first_use = False
+if data is not None:
+    with st.spinner(f"Loading {DISPLAY_NAMES.get(model, model)} (first use downloads the weights)…"):
+        pipe, load_ms = get_pipeline(category, model)
+    first_use = st.session_state.get("resident") != (category, model)
+    st.session_state["resident"] = (category, model)
 
 with col_out:
     st.markdown('<div class="panel-title">Decision</div>', unsafe_allow_html=True)
