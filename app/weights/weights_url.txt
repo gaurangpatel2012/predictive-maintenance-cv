@@ -1,0 +1,1 @@
+https://github.com/gaurangpatel2012/predictive-maintenance-cv/releases/download/v1.0-models

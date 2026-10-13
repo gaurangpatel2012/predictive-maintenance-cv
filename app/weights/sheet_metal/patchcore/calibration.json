@@ -1,0 +1,14 @@
+{
+  "threshold": 22.73394012451172,
+  "calib_f1": 1.0,
+  "calib_auroc": 1.0,
+  "nominal_score_sd": 0.8174049854278564,
+  "score_p01": 21.542194366455078,
+  "score_p99": 23.420835494995117,
+  "n_calib": 4,
+  "n_calib_anomalous": 3,
+  "model": "patchcore",
+  "category": "sheet_metal",
+  "seed": 0,
+  "calibration_set": "re-split val, nominal lighting"
+}

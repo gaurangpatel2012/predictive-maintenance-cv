@@ -1,0 +1,11 @@
+2026-10-12 13:32:47,481 INFO train: training patchcore on sheet_metal, seed 1, device cuda
+2026-10-12 13:32:47,496 INFO train: train n=137 (anomalous 0), val n=19 (anomalous 0)
+2026-10-12 13:32:50,151 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2026-10-12 13:32:50,429 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/resnet50.a1_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:32:50,430 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:32:50,431 INFO timm.models._hub: [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 13:32:50,463 INFO timm.models._builder: Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2026-10-12 13:32:53,951 INFO src.models.patchcore: patchcore bank 789/78912 patches (2.31 MiB fp16) built in 3.3s
+2026-10-12 13:32:54,646 INFO train: threshold 22.5715 (calib F1 1.000, AUROC 1.000, n=4)
+saved /content/predictive-maintenance-cv/artifacts/sheet_metal/patchcore/seed1/model.pt (35.0 MiB)

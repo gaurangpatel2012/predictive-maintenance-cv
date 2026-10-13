@@ -1,0 +1,23 @@
+2026-10-12 14:26:12,024 INFO train: training resnet50 on can, seed 2, device cuda
+2026-10-12 14:26:12,040 INFO train: train n=496 (anomalous 48), val n=76 (anomalous 18)
+2026-10-12 14:26:14,572 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2026-10-12 14:26:14,887 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/resnet50.a1_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 14:26:14,887 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 14:26:14,889 INFO timm.models._hub: [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 14:26:14,926 INFO timm.models._builder: Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2026-10-12 14:26:24,999 INFO src.models.classifier: resnet50 epoch 0 train_loss=0.6921 val_loss=0.6849 val_f1=0.4186 (9.8s)
+2026-10-12 14:26:32,783 INFO src.models.classifier: resnet50 epoch 1 train_loss=0.6735 val_loss=0.6622 val_f1=0.4390 (7.7s)
+2026-10-12 14:26:41,738 INFO src.models.classifier: resnet50 epoch 2 train_loss=0.6401 val_loss=0.6976 val_f1=0.4444 (8.8s)
+2026-10-12 14:26:50,050 INFO src.models.classifier: resnet50 epoch 3 train_loss=0.5547 val_loss=0.6281 val_f1=0.4557 (8.3s)
+2026-10-12 14:26:58,245 INFO src.models.classifier: resnet50 epoch 4 train_loss=0.4512 val_loss=0.7008 val_f1=0.4615 (8.1s)
+2026-10-12 14:27:06,622 INFO src.models.classifier: resnet50 epoch 5 train_loss=0.3839 val_loss=0.8373 val_f1=0.4615 (8.3s)
+2026-10-12 14:27:14,287 INFO src.models.classifier: resnet50 epoch 6 train_loss=0.3356 val_loss=0.9159 val_f1=0.4384 (7.7s)
+2026-10-12 14:27:22,731 INFO src.models.classifier: resnet50 epoch 7 train_loss=0.2992 val_loss=0.9716 val_f1=0.4286 (8.4s)
+2026-10-12 14:27:30,360 INFO src.models.classifier: resnet50 epoch 8 train_loss=0.2536 val_loss=1.0432 val_f1=0.4096 (7.6s)
+2026-10-12 14:27:39,039 INFO src.models.classifier: resnet50 epoch 9 train_loss=0.2510 val_loss=1.0987 val_f1=0.3830 (8.7s)
+2026-10-12 14:27:47,029 INFO src.models.classifier: resnet50 epoch 10 train_loss=0.1766 val_loss=1.2261 val_f1=0.3871 (8.0s)
+2026-10-12 14:27:55,283 INFO src.models.classifier: resnet50 epoch 11 train_loss=0.1755 val_loss=1.1941 val_f1=0.4000 (8.3s)
+2026-10-12 14:27:55,283 INFO src.models.classifier: early stopping at epoch 11 (best 4)
+2026-10-12 14:27:55,918 INFO train: threshold 0.0717081 (calib F1 0.750, AUROC 0.000, n=5)
+saved /content/predictive-maintenance-cv/artifacts/can/resnet50/seed2/model.pt (89.9 MiB)

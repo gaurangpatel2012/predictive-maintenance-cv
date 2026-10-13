@@ -1,0 +1,29 @@
+2026-10-12 14:31:02,535 INFO train: training efficientnet_b0 on can, seed 1, device cuda
+2026-10-12 14:31:02,553 INFO train: train n=496 (anomalous 48), val n=76 (anomalous 18)
+2026-10-12 14:31:04,842 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b0.ra_in1k)
+2026-10-12 14:31:05,121 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b0.ra_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-12 14:31:05,122 INFO timm.models._hub: [timm/efficientnet_b0.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 14:31:05,140 INFO timm.models._builder: Missing keys (classifier.weight, classifier.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+/content/predictive-maintenance-cv/src/models/classifier.py:82: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+2026-10-12 14:31:15,856 INFO src.models.classifier: efficientnet_b0 epoch 0 train_loss=1.2596 val_loss=1.8256 val_f1=0.4557 (10.5s)
+2026-10-12 14:31:23,609 INFO src.models.classifier: efficientnet_b0 epoch 1 train_loss=0.4294 val_loss=2.1562 val_f1=0.4557 (7.7s)
+2026-10-12 14:31:30,030 INFO src.models.classifier: efficientnet_b0 epoch 2 train_loss=0.2470 val_loss=2.3466 val_f1=0.4000 (6.4s)
+2026-10-12 14:31:37,533 INFO src.models.classifier: efficientnet_b0 epoch 3 train_loss=0.2293 val_loss=2.4144 val_f1=0.4324 (7.5s)
+2026-10-12 14:31:43,971 INFO src.models.classifier: efficientnet_b0 epoch 4 train_loss=0.2387 val_loss=2.9641 val_f1=0.3913 (6.4s)
+2026-10-12 14:31:51,204 INFO src.models.classifier: efficientnet_b0 epoch 5 train_loss=0.1781 val_loss=2.4416 val_f1=0.4571 (7.2s)
+2026-10-12 14:31:58,044 INFO src.models.classifier: efficientnet_b0 epoch 6 train_loss=0.0646 val_loss=2.6350 val_f1=0.4762 (6.8s)
+2026-10-12 14:32:05,064 INFO src.models.classifier: efficientnet_b0 epoch 7 train_loss=0.0754 val_loss=2.7407 val_f1=0.4932 (7.0s)
+2026-10-12 14:32:12,043 INFO src.models.classifier: efficientnet_b0 epoch 8 train_loss=0.0778 val_loss=2.3654 val_f1=0.5217 (7.0s)
+2026-10-12 14:32:18,978 INFO src.models.classifier: efficientnet_b0 epoch 9 train_loss=0.0692 val_loss=2.2862 val_f1=0.5217 (6.9s)
+2026-10-12 14:32:26,167 INFO src.models.classifier: efficientnet_b0 epoch 10 train_loss=0.0820 val_loss=2.0176 val_f1=0.5714 (7.2s)
+2026-10-12 14:32:33,064 INFO src.models.classifier: efficientnet_b0 epoch 11 train_loss=0.0402 val_loss=2.2796 val_f1=0.5079 (6.9s)
+2026-10-12 14:32:40,364 INFO src.models.classifier: efficientnet_b0 epoch 12 train_loss=0.0368 val_loss=2.3190 val_f1=0.4848 (7.3s)
+2026-10-12 14:32:47,271 INFO src.models.classifier: efficientnet_b0 epoch 13 train_loss=0.0262 val_loss=2.0283 val_f1=0.5333 (6.9s)
+2026-10-12 14:32:54,588 INFO src.models.classifier: efficientnet_b0 epoch 14 train_loss=0.0116 val_loss=2.0682 val_f1=0.5538 (7.3s)
+2026-10-12 14:33:01,454 INFO src.models.classifier: efficientnet_b0 epoch 15 train_loss=0.0161 val_loss=2.0302 val_f1=0.5538 (6.9s)
+2026-10-12 14:33:08,730 INFO src.models.classifier: efficientnet_b0 epoch 16 train_loss=0.0106 val_loss=2.1506 val_f1=0.5614 (7.3s)
+2026-10-12 14:33:15,487 INFO src.models.classifier: efficientnet_b0 epoch 17 train_loss=0.0028 val_loss=2.2327 val_f1=0.5625 (6.8s)
+2026-10-12 14:33:15,487 INFO src.models.classifier: early stopping at epoch 17 (best 10)
+2026-10-12 14:33:16,132 INFO train: threshold 2.53335e-06 (calib F1 0.750, AUROC 0.333, n=5)
+saved /content/predictive-maintenance-cv/artifacts/can/efficientnet_b0/seed1/model.pt (15.5 MiB)

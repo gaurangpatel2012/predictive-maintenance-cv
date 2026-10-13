@@ -1,0 +1,42 @@
+2026-10-12 14:41:44,082 INFO train: training vit on can, seed 1, device cuda
+2026-10-12 14:41:44,111 INFO train: train n=496 (anomalous 48), val n=76 (anomalous 18)
+2026-10-12 14:41:48,944 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_384.augreg_in21k_ft_in1k)
+2026-10-12 14:41:49,257 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/vit_base_patch16_384.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 14:41:49,258 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 14:41:49,259 INFO timm.models._hub: [timm/vit_base_patch16_384.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 14:41:49,356 INFO timm.models._builder: Missing keys (head.weight, head.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+/content/predictive-maintenance-cv/src/models/classifier.py:82: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+2026-10-12 14:42:08,996 INFO src.models.classifier: vit epoch 0 train_loss=0.6471 val_loss=1.6155 val_f1=0.3871 (19.3s)
+2026-10-12 14:42:28,928 INFO src.models.classifier: vit epoch 1 train_loss=0.3993 val_loss=1.8369 val_f1=0.4444 (19.6s)
+2026-10-12 14:42:48,073 INFO src.models.classifier: vit epoch 2 train_loss=0.3273 val_loss=1.6806 val_f1=0.4800 (18.8s)
+2026-10-12 14:43:06,428 INFO src.models.classifier: vit epoch 3 train_loss=0.2893 val_loss=1.5933 val_f1=0.4444 (18.2s)
+2026-10-12 14:43:24,654 INFO src.models.classifier: vit epoch 4 train_loss=0.2738 val_loss=1.9890 val_f1=0.4932 (18.2s)
+2026-10-12 14:43:43,051 INFO src.models.classifier: vit epoch 5 train_loss=0.1800 val_loss=1.6605 val_f1=0.4500 (18.2s)
+2026-10-12 14:44:01,478 INFO src.models.classifier: vit epoch 6 train_loss=0.2198 val_loss=1.8026 val_f1=0.4225 (18.4s)
+2026-10-12 14:44:19,575 INFO src.models.classifier: vit epoch 7 train_loss=0.1105 val_loss=3.3909 val_f1=0.4156 (18.1s)
+2026-10-12 14:44:37,849 INFO src.models.classifier: vit epoch 8 train_loss=0.1028 val_loss=2.1608 val_f1=0.4478 (18.3s)
+2026-10-12 14:44:55,852 INFO src.models.classifier: vit epoch 9 train_loss=0.1484 val_loss=1.5196 val_f1=0.4127 (18.0s)
+2026-10-12 14:45:13,848 INFO src.models.classifier: vit epoch 10 train_loss=0.0984 val_loss=2.3634 val_f1=0.4737 (18.0s)
+2026-10-12 14:45:31,969 INFO src.models.classifier: vit epoch 11 train_loss=0.0877 val_loss=1.6841 val_f1=0.5000 (18.1s)
+2026-10-12 14:45:50,215 INFO src.models.classifier: vit epoch 12 train_loss=0.0451 val_loss=1.7885 val_f1=0.4865 (18.1s)
+2026-10-12 14:46:08,344 INFO src.models.classifier: vit epoch 13 train_loss=0.1098 val_loss=1.1622 val_f1=0.4932 (18.1s)
+2026-10-12 14:46:26,432 INFO src.models.classifier: vit epoch 14 train_loss=0.0777 val_loss=2.0654 val_f1=0.4500 (18.1s)
+2026-10-12 14:46:44,772 INFO src.models.classifier: vit epoch 15 train_loss=0.0110 val_loss=2.0437 val_f1=0.4727 (18.3s)
+2026-10-12 14:47:02,667 INFO src.models.classifier: vit epoch 16 train_loss=0.0193 val_loss=2.8411 val_f1=0.4746 (17.9s)
+2026-10-12 14:47:20,714 INFO src.models.classifier: vit epoch 17 train_loss=0.0202 val_loss=2.1883 val_f1=0.5143 (18.0s)
+2026-10-12 14:47:38,873 INFO src.models.classifier: vit epoch 18 train_loss=0.0111 val_loss=1.9623 val_f1=0.5152 (18.0s)
+2026-10-12 14:47:56,867 INFO src.models.classifier: vit epoch 19 train_loss=0.0300 val_loss=2.4946 val_f1=0.5312 (17.8s)
+2026-10-12 14:48:14,957 INFO src.models.classifier: vit epoch 20 train_loss=0.0045 val_loss=2.3630 val_f1=0.5397 (17.9s)
+2026-10-12 14:48:33,025 INFO src.models.classifier: vit epoch 21 train_loss=0.0041 val_loss=2.5275 val_f1=0.5538 (17.9s)
+2026-10-12 14:48:51,393 INFO src.models.classifier: vit epoch 22 train_loss=0.0088 val_loss=2.6398 val_f1=0.5538 (18.2s)
+2026-10-12 14:49:09,205 INFO src.models.classifier: vit epoch 23 train_loss=0.0028 val_loss=2.6452 val_f1=0.5484 (17.8s)
+2026-10-12 14:49:26,963 INFO src.models.classifier: vit epoch 24 train_loss=0.0027 val_loss=2.6109 val_f1=0.5484 (17.8s)
+2026-10-12 14:49:44,800 INFO src.models.classifier: vit epoch 25 train_loss=0.0022 val_loss=2.7043 val_f1=0.5484 (17.8s)
+2026-10-12 14:50:02,816 INFO src.models.classifier: vit epoch 26 train_loss=0.0021 val_loss=2.7163 val_f1=0.5484 (18.0s)
+2026-10-12 14:50:20,646 INFO src.models.classifier: vit epoch 27 train_loss=0.0021 val_loss=2.7166 val_f1=0.5484 (17.8s)
+2026-10-12 14:50:38,511 INFO src.models.classifier: vit epoch 28 train_loss=0.0013 val_loss=2.7103 val_f1=0.5484 (17.9s)
+2026-10-12 14:50:38,511 INFO src.models.classifier: early stopping at epoch 28 (best 21)
+2026-10-12 14:50:41,686 INFO train: threshold 1.04908e-06 (calib F1 0.857, AUROC 0.500, n=5)
+saved /content/predictive-maintenance-cv/artifacts/can/vit/seed1/model.pt (328.4 MiB)

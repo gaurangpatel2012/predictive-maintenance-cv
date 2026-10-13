@@ -1,0 +1,14 @@
+{
+  "threshold": 0.00029979689861647785,
+  "calib_f1": 0.8571428571428571,
+  "calib_auroc": 0.0,
+  "nominal_score_sd": 0.03826961666345596,
+  "score_p01": 0.00029997885576449335,
+  "score_p99": 0.07455108314752579,
+  "n_calib": 4,
+  "n_calib_anomalous": 3,
+  "model": "vit",
+  "category": "sheet_metal",
+  "seed": 0,
+  "calibration_set": "re-split val, nominal lighting"
+}

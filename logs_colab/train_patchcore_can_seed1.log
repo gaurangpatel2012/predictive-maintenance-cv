@@ -1,0 +1,11 @@
+2026-10-12 13:55:36,363 INFO train: training patchcore on can, seed 1, device cuda
+2026-10-12 13:55:36,384 INFO train: train n=412 (anomalous 0), val n=46 (anomalous 0)
+2026-10-12 13:55:39,198 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2026-10-12 13:55:39,508 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/resnet50.a1_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:55:39,509 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:55:39,510 INFO timm.models._hub: [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 13:55:39,551 INFO timm.models._builder: Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+2026-10-12 13:55:52,520 INFO src.models.patchcore: patchcore bank 2373/237312 patches (6.95 MiB fp16) built in 12.7s
+2026-10-12 13:55:53,028 INFO train: threshold 24.8075 (calib F1 0.750, AUROC 0.333, n=5)
+saved /content/predictive-maintenance-cv/artifacts/can/patchcore/seed1/model.pt (39.7 MiB)

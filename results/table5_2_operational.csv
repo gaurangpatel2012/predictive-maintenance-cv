@@ -1,0 +1,11 @@
+category,model,median_ms,p95_ms,p99_ms,throughput_ips,model_size_mb,peak_mem_mb,device_name
+sheet_metal,PatchCore,107.0,154.5,163.8,8.8,35.0,77.0,Tesla T4 / x86_64
+sheet_metal,Convolutional Autoencoder,97.3,146.6,159.1,9.6,2.3,15.1,Tesla T4 / x86_64
+sheet_metal,ResNet-50,116.3,165.7,177.6,8.0,89.9,131.6,Tesla T4 / x86_64
+sheet_metal,EfficientNet-B0,105.0,157.4,169.1,8.8,15.5,60.6,Tesla T4 / x86_64
+sheet_metal,Vision Transformer,138.3,200.7,214.2,6.7,328.4,361.4,Tesla T4 / x86_64
+can,PatchCore,98.8,141.2,149.6,9.3,39.7,86.4,Tesla T4 / x86_64
+can,Convolutional Autoencoder,91.8,134.5,140.2,10.1,2.3,15.1,Tesla T4 / x86_64
+can,ResNet-50,101.4,144.1,150.6,9.1,89.9,131.6,Tesla T4 / x86_64
+can,EfficientNet-B0,92.8,140.3,148.8,9.8,15.5,60.6,Tesla T4 / x86_64
+can,Vision Transformer,118.9,170.4,178.6,7.7,328.4,361.4,Tesla T4 / x86_64

@@ -1,0 +1,22 @@
+degradation_examples
+  wrote /content/predictive-maintenance-cv/figures/degradation_examples.{png,pdf}
+fig5_1
+  wrote /content/predictive-maintenance-cv/figures/fig5_1_performance.{png,pdf}
+fig5_2
+  wrote /content/predictive-maintenance-cv/figures/fig5_2_latency.{png,pdf}
+  wrote /content/predictive-maintenance-cv/figures/fig5_2_latency_can.{png,pdf}
+fig5_3
+  wrote /content/predictive-maintenance-cv/figures/fig5_3_degradation.{png,pdf}
+  wrote /content/predictive-maintenance-cv/figures/fig5_3_degradation_can.{png,pdf}
+fig5_4
+  wrote /content/predictive-maintenance-cv/figures/fig5_4_stream.{png,pdf}
+fig5_5
+  note: PatchCore has no false positive on the nominal eval set - row omitted
+  note: PatchCore has no missed defect on the nominal eval set - row omitted
+  wrote /content/predictive-maintenance-cv/figures/fig5_5_examples.{png,pdf}
+fig5_6
+  skip: exp6_service.csv not found
+tables
+  wrote /content/predictive-maintenance-cv/results/table5_1_predictive.csv
+  wrote /content/predictive-maintenance-cv/results/table5_2_operational.csv
+  wrote /content/predictive-maintenance-cv/results/table5_3_reliability.csv

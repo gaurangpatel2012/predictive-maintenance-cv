@@ -1,0 +1,15 @@
+{
+  "threshold": 0.026637982577085495,
+  "calib_f1": 0.8571428571428571,
+  "calib_auroc": 0.3333333333333333,
+  "nominal_score_sd": 0.0025971115101128817,
+  "score_p01": 0.026652684435248375,
+  "score_p99": 0.03219754248857498,
+  "n_calib": 4,
+  "n_calib_anomalous": 3,
+  "model": "cae",
+  "category": "sheet_metal",
+  "seed": 0,
+  "calibration_set": "re-split val, nominal lighting",
+  "image_score": "mean"
+}

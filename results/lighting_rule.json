@@ -1,0 +1,48 @@
+{
+  "can": {
+    "method": "filename",
+    "nominal_tokens": [
+      "regular"
+    ],
+    "shifted_tokens": [
+      "overexposed",
+      "shift_1",
+      "shift_2",
+      "shift_3",
+      "underexposed"
+    ],
+    "counts": {
+      "test_public/bad": {
+        "nominal": 15,
+        "shifted": 75
+      },
+      "test_public/good": {
+        "nominal": 12,
+        "shifted": 60
+      }
+    }
+  },
+  "sheet_metal": {
+    "method": "filename",
+    "nominal_tokens": [
+      "regular"
+    ],
+    "shifted_tokens": [
+      "overexposed",
+      "shift_1",
+      "shift_2",
+      "shift_3",
+      "underexposed"
+    ],
+    "counts": {
+      "test_public/bad": {
+        "nominal": 15,
+        "shifted": 75
+      },
+      "test_public/good": {
+        "nominal": 4,
+        "shifted": 20
+      }
+    }
+  }
+}

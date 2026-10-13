@@ -1,0 +1,22 @@
+2026-10-12 13:45:44,032 INFO train: training efficientnet_b0 on sheet_metal, seed 0, device cuda
+2026-10-12 13:45:44,046 INFO train: train n=197 (anomalous 48), val n=43 (anomalous 18)
+2026-10-12 13:45:46,371 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b0.ra_in1k)
+2026-10-12 13:45:46,651 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b0.ra_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:45:46,652 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:45:46,890 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/timm/efficientnet_b0.ra_in1k/xet-read-token/1b5383e5f79cc0f7fc067e372f8f26a5fa73f26a "HTTP/1.1 200 OK"
+2026-10-12 13:45:48,561 INFO timm.models._hub: [timm/efficientnet_b0.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 13:45:48,591 INFO timm.models._builder: Missing keys (classifier.weight, classifier.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+/content/predictive-maintenance-cv/src/models/classifier.py:82: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+2026-10-12 13:45:58,050 INFO src.models.classifier: efficientnet_b0 epoch 0 train_loss=1.3888 val_loss=0.9720 val_f1=0.7059 (9.2s)
+2026-10-12 13:46:01,042 INFO src.models.classifier: efficientnet_b0 epoch 1 train_loss=0.8270 val_loss=1.3286 val_f1=0.6316 (3.0s)
+2026-10-12 13:46:05,270 INFO src.models.classifier: efficientnet_b0 epoch 2 train_loss=0.5982 val_loss=0.8165 val_f1=0.6486 (4.2s)
+2026-10-12 13:46:07,961 INFO src.models.classifier: efficientnet_b0 epoch 3 train_loss=0.3428 val_loss=1.3860 val_f1=0.6102 (2.7s)
+2026-10-12 13:46:10,738 INFO src.models.classifier: efficientnet_b0 epoch 4 train_loss=0.3191 val_loss=1.4455 val_f1=0.6182 (2.8s)
+2026-10-12 13:46:13,469 INFO src.models.classifier: efficientnet_b0 epoch 5 train_loss=0.2629 val_loss=1.2112 val_f1=0.6545 (2.7s)
+2026-10-12 13:46:16,610 INFO src.models.classifier: efficientnet_b0 epoch 6 train_loss=0.2043 val_loss=1.3674 val_f1=0.6207 (3.1s)
+2026-10-12 13:46:20,636 INFO src.models.classifier: efficientnet_b0 epoch 7 train_loss=0.2049 val_loss=1.4258 val_f1=0.6207 (4.0s)
+2026-10-12 13:46:20,637 INFO src.models.classifier: early stopping at epoch 7 (best 0)
+2026-10-12 13:46:21,079 INFO train: threshold 0.622699 (calib F1 1.000, AUROC 1.000, n=4)
+saved /content/predictive-maintenance-cv/artifacts/sheet_metal/efficientnet_b0/seed0/model.pt (15.5 MiB)

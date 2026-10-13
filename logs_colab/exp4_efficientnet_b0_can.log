@@ -1,0 +1,6 @@
+/content/predictive-maintenance-cv/src/data/dataset.py:70: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  x = torch.from_numpy(np.ascontiguousarray(img)).permute(2, 0, 1).float().div_(255.0)
+repeat 0: 500 images in 51.2s
+repeat 1: 500 images in 50.3s
+repeat 2: 500 images in 51.3s
+median 92.8 ms, p95 140.3 ms, p99 148.8 ms, miss rate 0.0000, 9.82 img/s on Tesla T4 / x86_64

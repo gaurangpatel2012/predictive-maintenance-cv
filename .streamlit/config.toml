@@ -1,0 +1,9 @@
+[client]
+# viewer mode: hides the developer toolbar (Deploy / Stop / rerun) from users of the dashboard
+toolbarMode = "viewer"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"

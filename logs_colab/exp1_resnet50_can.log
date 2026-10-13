@@ -1,0 +1,3 @@
+seed 0: n=8 F1=0.000 AUROC=0.125 AU-PRO@0.05=nan
+seed 1: n=8 F1=0.000 AUROC=0.125 AU-PRO@0.05=nan
+seed 2: n=8 F1=0.600 AUROC=0.188 AU-PRO@0.05=nan

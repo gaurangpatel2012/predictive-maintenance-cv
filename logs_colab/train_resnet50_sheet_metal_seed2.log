@@ -1,0 +1,34 @@
+2026-10-12 13:44:14,584 INFO train: training resnet50 on sheet_metal, seed 2, device cuda
+2026-10-12 13:44:14,598 INFO train: train n=197 (anomalous 48), val n=43 (anomalous 18)
+2026-10-12 13:44:17,180 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+2026-10-12 13:44:17,562 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/resnet50.a1_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:44:17,563 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-12 13:44:17,565 INFO timm.models._hub: [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 13:44:17,600 INFO timm.models._builder: Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+/content/predictive-maintenance-cv/src/models/classifier.py:82: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+2026-10-12 13:44:23,881 INFO src.models.classifier: resnet50 epoch 0 train_loss=0.6937 val_loss=0.6930 val_f1=0.6102 (6.0s)
+2026-10-12 13:44:27,459 INFO src.models.classifier: resnet50 epoch 1 train_loss=0.6897 val_loss=0.6999 val_f1=0.5902 (3.5s)
+2026-10-12 13:44:31,016 INFO src.models.classifier: resnet50 epoch 2 train_loss=0.6825 val_loss=0.6942 val_f1=0.5902 (3.6s)
+2026-10-12 13:44:34,713 INFO src.models.classifier: resnet50 epoch 3 train_loss=0.6626 val_loss=0.6886 val_f1=0.6000 (3.7s)
+2026-10-12 13:44:38,887 INFO src.models.classifier: resnet50 epoch 4 train_loss=0.6368 val_loss=0.6719 val_f1=0.6341 (4.2s)
+2026-10-12 13:44:42,522 INFO src.models.classifier: resnet50 epoch 5 train_loss=0.5873 val_loss=0.6434 val_f1=0.6275 (3.6s)
+2026-10-12 13:44:46,095 INFO src.models.classifier: resnet50 epoch 6 train_loss=0.5836 val_loss=0.6368 val_f1=0.6977 (3.6s)
+2026-10-12 13:44:49,933 INFO src.models.classifier: resnet50 epoch 7 train_loss=0.5459 val_loss=0.6381 val_f1=0.7000 (3.8s)
+2026-10-12 13:44:54,191 INFO src.models.classifier: resnet50 epoch 8 train_loss=0.5311 val_loss=0.6064 val_f1=0.7429 (4.2s)
+2026-10-12 13:44:57,794 INFO src.models.classifier: resnet50 epoch 9 train_loss=0.5067 val_loss=0.6293 val_f1=0.7500 (3.6s)
+2026-10-12 13:45:01,380 INFO src.models.classifier: resnet50 epoch 10 train_loss=0.5127 val_loss=0.5990 val_f1=0.6842 (3.5s)
+2026-10-12 13:45:05,241 INFO src.models.classifier: resnet50 epoch 11 train_loss=0.4745 val_loss=0.5789 val_f1=0.7143 (3.9s)
+2026-10-12 13:45:09,268 INFO src.models.classifier: resnet50 epoch 12 train_loss=0.4664 val_loss=0.5729 val_f1=0.7619 (4.0s)
+2026-10-12 13:45:12,859 INFO src.models.classifier: resnet50 epoch 13 train_loss=0.4609 val_loss=0.5890 val_f1=0.7778 (3.5s)
+2026-10-12 13:45:16,453 INFO src.models.classifier: resnet50 epoch 14 train_loss=0.4126 val_loss=0.5861 val_f1=0.7222 (3.5s)
+2026-10-12 13:45:20,354 INFO src.models.classifier: resnet50 epoch 15 train_loss=0.4070 val_loss=0.5735 val_f1=0.7059 (3.9s)
+2026-10-12 13:45:24,401 INFO src.models.classifier: resnet50 epoch 16 train_loss=0.3974 val_loss=0.5690 val_f1=0.7429 (4.0s)
+2026-10-12 13:45:27,950 INFO src.models.classifier: resnet50 epoch 17 train_loss=0.3750 val_loss=0.5990 val_f1=0.7568 (3.5s)
+2026-10-12 13:45:31,543 INFO src.models.classifier: resnet50 epoch 18 train_loss=0.3735 val_loss=0.5921 val_f1=0.7429 (3.6s)
+2026-10-12 13:45:35,585 INFO src.models.classifier: resnet50 epoch 19 train_loss=0.3675 val_loss=0.5847 val_f1=0.7179 (4.0s)
+2026-10-12 13:45:39,426 INFO src.models.classifier: resnet50 epoch 20 train_loss=0.3306 val_loss=0.5987 val_f1=0.7000 (3.8s)
+2026-10-12 13:45:39,426 INFO src.models.classifier: early stopping at epoch 20 (best 13)
+2026-10-12 13:45:40,018 INFO train: threshold 0.283562 (calib F1 0.857, AUROC 0.667, n=4)
+saved /content/predictive-maintenance-cv/artifacts/sheet_metal/resnet50/seed2/model.pt (89.9 MiB)

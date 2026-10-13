@@ -1,0 +1,100 @@
+data_root: data/mvtec_ad_2
+categories: [sheet_metal, can]   # first entry is the primary category (figures use it unsuffixed)
+image_size: 384
+normalise_mean: [0.485, 0.456, 0.406]
+normalise_std:  [0.229, 0.224, 0.225]
+
+# Not in the plan's config block; added so that every output location and the
+# compute device can be overridden from the command line (e.g. for smoke tests).
+paths:
+  results: results
+  artifacts: artifacts
+  figures: figures
+
+runtime:
+  device: auto                 # auto -> cuda, then mps, then cpu
+  num_workers: 0
+  pretrained: true             # ImageNet weights from timm; false only for smoke tests
+
+cache:
+  enabled: true
+  dir: data/cache_384          # pre-resized images; built once in Milestone 2
+  rebuild: false               # set true only if image_size changes
+
+split:
+  ratios: {train: 0.5, val: 0.2, eval: 0.3}
+  seed: 42
+  stratify_by: [label, lighting]   # used only when group_by is unset
+  group_by: part                   # keep all 6 lighting variants of a test part together
+
+train:
+  seeds: [0, 1, 2]
+  optimiser: adamw
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  batch_size: 16
+  accumulation_steps: 1          # >1: micro-batches of batch_size, effective batch = product
+  max_epochs: 30
+  warmup_epochs: 3
+  scheduler: cosine
+  early_stopping_patience: 7
+  early_stopping_metric: val_f1
+  amp: true                    # applied on CUDA only
+  augment: {hflip: 0.5, vflip: 0.5, rotate_degrees: 10}
+
+cae:
+  latent_channels: 64
+  lr: 1.0e-3
+  max_epochs: 100
+  loss_weights: {l1: 0.5, ssim: 0.5}
+  early_stopping_metric: val_loss   # official_val has no anomalies, so val_f1 is undefined
+  map_sigma: 4
+  image_score: mean            # plan §8.5; 'max' tried and rejected (README D14)
+
+patchcore:
+  backbone: resnet50
+  layers: [2, 3]
+  neighbourhood: 3
+  coreset_rate: 0.01
+  projection_dim: 128
+  n_neighbours: 1
+  map_sigma: 4
+
+degradations:
+  gaussian_blur:  {param: sigma,   levels: [0.5, 1.0, 2.0, 3.5, 5.0]}
+  gaussian_noise: {param: sigma,   levels: [2, 5, 10, 20, 35]}
+  jpeg:           {param: quality, levels: [90, 70, 50, 30, 15]}
+  downscale:      {param: factor,  levels: [1.5, 2, 3, 4, 6]}
+
+lighting:
+  sd_multiplier: 2.0           # empirical rule: nominal if |mean_lum - train mean| <= k * train SD
+
+evaluation:
+  aupro_fpr_limits: [0.05, 0.30]
+  ece_bins: 15
+
+realtime:
+  latency_budget_ms: 1000
+  arrival_rate_hz: 1.0
+  sequence_length: 500          # Exp 5 stream length; plan said 2000 (README D17)
+  warmup_images: 50
+  latency_images: 500          # timed single-image inferences per repeat (Exp 4)
+  repeats: 3                   # Exp 4 latency repeats
+  stream_repeats: 2            # Exp 5 stream repeats; plan said 3 (README D17)
+  window_lengths: [10, 25, 50, 100]
+  defect_rate_thresholds: [0.2, 0.3, 0.4, 0.5]
+  # Synthetic step change for the window sweep (Exp 5). Parameters of the evaluation,
+  # not findings; they must be stated in Section 5.5.
+  step_change:
+    sequence_length: 2000
+    change_index: 1000
+    prevalence_before: 0.1
+    prevalence_after: 0.6
+    trials: 50
+    seed: 0
+
+service:
+  concurrency_levels: [1, 2, 4, 8]
+  requests_per_level: 200
+  hibernation_wait_hours: 13
+  request_timeout_s: 120

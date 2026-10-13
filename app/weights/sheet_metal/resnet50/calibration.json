@@ -1,0 +1,14 @@
+{
+  "threshold": 0.46407896280288696,
+  "calib_f1": 0.8571428571428571,
+  "calib_auroc": 0.6666666666666666,
+  "nominal_score_sd": 0.006299585569649935,
+  "score_p01": 0.46411144733428955,
+  "score_p99": 0.47702163457870483,
+  "n_calib": 4,
+  "n_calib_anomalous": 3,
+  "model": "resnet50",
+  "category": "sheet_metal",
+  "seed": 0,
+  "calibration_set": "re-split val, nominal lighting"
+}

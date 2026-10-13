@@ -1,0 +1,21 @@
+# dataset (MVTec AD 2, CC BY-NC-SA 4.0) and everything derived from its images
+data/
+# trained models: published as GitHub release assets, not in git history
+artifacts/
+app/weights/**/model.pt
+*.pt
+*.pth
+# local environments, caches, scratch
+.venv/
+__pycache__/
+*.tmp
+.DS_Store
+# development-only runs and logs (the thesis evidence is results/ and logs_colab/)
+_mac_dev_runs/
+logs/
+app/demo_images/*
+!app/demo_images/.gitkeep
+# figures that show dataset images (they appear in the thesis, not in this public repository)
+figures/fig4_preprocessing.*
+figures/degradation_examples.*
+figures/fig5_5_examples.*

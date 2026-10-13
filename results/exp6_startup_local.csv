@@ -1,0 +1,6 @@
+timestamp,model,process_ready_ms,first_request_ms,model_load_ms,inference_latency_ms,status,host
+2026-10-13T19:30:27+00:00,patchcore,1601.9,1639.9,1401.0,200.0,200,"local Apple M2, 8 GB, CPU inference"
+2026-10-13T19:31:47+00:00,cae,1533.1,137.2,14.7,89.6,200,"local Apple M2, 8 GB, CPU inference"
+2026-10-13T19:32:27+00:00,resnet50,1534.2,1596.9,1429.9,132.5,200,"local Apple M2, 8 GB, CPU inference"
+2026-10-13T19:33:48+00:00,efficientnet_b0,1473.5,1418.9,1177.5,205.5,200,"local Apple M2, 8 GB, CPU inference"
+2026-10-13T19:35:33+00:00,vit,1466.5,3095.7,2808.3,247.7,200,"local Apple M2, 8 GB, CPU inference"

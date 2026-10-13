@@ -1,0 +1,30 @@
+2026-10-12 14:33:20,507 INFO train: training efficientnet_b0 on can, seed 2, device cuda
+2026-10-12 14:33:20,524 INFO train: train n=496 (anomalous 48), val n=76 (anomalous 18)
+2026-10-12 14:33:22,818 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b0.ra_in1k)
+2026-10-12 14:33:23,151 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b0.ra_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-12 14:33:23,152 INFO timm.models._hub: [timm/efficientnet_b0.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-12 14:33:23,170 INFO timm.models._builder: Missing keys (classifier.weight, classifier.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+/content/predictive-maintenance-cv/src/models/classifier.py:82: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+2026-10-12 14:33:34,234 INFO src.models.classifier: efficientnet_b0 epoch 0 train_loss=1.2834 val_loss=2.1321 val_f1=0.4500 (10.8s)
+2026-10-12 14:33:40,566 INFO src.models.classifier: efficientnet_b0 epoch 1 train_loss=0.4517 val_loss=2.6330 val_f1=0.4235 (6.3s)
+2026-10-12 14:33:48,511 INFO src.models.classifier: efficientnet_b0 epoch 2 train_loss=0.2788 val_loss=2.7931 val_f1=0.4557 (7.9s)
+2026-10-12 14:33:54,810 INFO src.models.classifier: efficientnet_b0 epoch 3 train_loss=0.2371 val_loss=2.8817 val_f1=0.3956 (6.3s)
+2026-10-12 14:34:02,800 INFO src.models.classifier: efficientnet_b0 epoch 4 train_loss=0.1535 val_loss=2.4273 val_f1=0.4932 (8.0s)
+2026-10-12 14:34:09,109 INFO src.models.classifier: efficientnet_b0 epoch 5 train_loss=0.1528 val_loss=2.2552 val_f1=0.4737 (6.3s)
+2026-10-12 14:34:16,980 INFO src.models.classifier: efficientnet_b0 epoch 6 train_loss=0.1164 val_loss=2.4205 val_f1=0.5070 (7.9s)
+2026-10-12 14:34:23,277 INFO src.models.classifier: efficientnet_b0 epoch 7 train_loss=0.1297 val_loss=2.2730 val_f1=0.4839 (6.3s)
+2026-10-12 14:34:31,202 INFO src.models.classifier: efficientnet_b0 epoch 8 train_loss=0.1197 val_loss=2.1792 val_f1=0.5294 (7.9s)
+2026-10-12 14:34:37,535 INFO src.models.classifier: efficientnet_b0 epoch 9 train_loss=0.0746 val_loss=2.3091 val_f1=0.5217 (6.3s)
+2026-10-12 14:34:45,605 INFO src.models.classifier: efficientnet_b0 epoch 10 train_loss=0.0300 val_loss=2.1199 val_f1=0.5373 (8.1s)
+2026-10-12 14:34:51,925 INFO src.models.classifier: efficientnet_b0 epoch 11 train_loss=0.0798 val_loss=1.6000 val_f1=0.6102 (6.3s)
+2026-10-12 14:34:59,698 INFO src.models.classifier: efficientnet_b0 epoch 12 train_loss=0.0333 val_loss=1.7599 val_f1=0.5312 (7.8s)
+2026-10-12 14:35:05,990 INFO src.models.classifier: efficientnet_b0 epoch 13 train_loss=0.0142 val_loss=1.8136 val_f1=0.5455 (6.3s)
+2026-10-12 14:35:13,716 INFO src.models.classifier: efficientnet_b0 epoch 14 train_loss=0.0588 val_loss=2.4293 val_f1=0.5455 (7.7s)
+2026-10-12 14:35:19,961 INFO src.models.classifier: efficientnet_b0 epoch 15 train_loss=0.0330 val_loss=1.7930 val_f1=0.5455 (6.2s)
+2026-10-12 14:35:27,663 INFO src.models.classifier: efficientnet_b0 epoch 16 train_loss=0.0128 val_loss=1.9354 val_f1=0.6000 (7.7s)
+2026-10-12 14:35:33,942 INFO src.models.classifier: efficientnet_b0 epoch 17 train_loss=0.0198 val_loss=2.3916 val_f1=0.5455 (6.3s)
+2026-10-12 14:35:41,799 INFO src.models.classifier: efficientnet_b0 epoch 18 train_loss=0.0279 val_loss=1.8117 val_f1=0.5455 (7.9s)
+2026-10-12 14:35:41,799 INFO src.models.classifier: early stopping at epoch 18 (best 11)
+2026-10-12 14:35:42,249 INFO train: threshold 0.000125316 (calib F1 0.857, AUROC 0.667, n=5)
+saved /content/predictive-maintenance-cv/artifacts/can/efficientnet_b0/seed2/model.pt (15.5 MiB)
