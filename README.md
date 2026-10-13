@@ -17,6 +17,9 @@ streaming, and the behaviour of a prediction service.
 | Reconstruction | Convolutional autoencoder (trained from scratch) |
 | Memory-based | PatchCore (implemented directly; ResNet-50 layer 2+3 features, 1 % coreset) |
 
+**Live dashboard:** <https://pm-inspection.streamlit.app> — upload a sheet-metal inspection image; the
+first use of a model downloads its weights (about 10 s), later predictions take a few hundred ms.
+
 ## Main findings (sheet metal, mean of 3 seeds)
 
 | | PatchCore | Autoencoder | ResNet-50 | EfficientNet-B0 | ViT |
