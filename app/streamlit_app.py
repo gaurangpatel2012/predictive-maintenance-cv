@@ -104,8 +104,11 @@ pipe = load_ms = None
 first_use = False
 if data is not None:
     with st.spinner(f"Loading {DISPLAY_NAMES.get(model, model)} (first use downloads the weights)…"):
+        t_call = time.perf_counter()
         pipe, load_ms = get_pipeline(category, model)
-    first_use = st.session_state.get("resident") != (category, model)
+        # the cache returns the load time of the original load; report it only when this run loaded
+        fresh_load = (time.perf_counter() - t_call) * 1e3 > 0.5 * load_ms
+    first_use = st.session_state.get("resident") != (category, model) and fresh_load
     st.session_state["resident"] = (category, model)
 
 with col_out:
