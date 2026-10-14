@@ -1,0 +1,7 @@
+category,seed,n_images,device,pixel_auroc,err_defect,err_normal,ratio
+sheet_metal,0,30,mps,0.8853,0.07679,0.02585,2.97
+sheet_metal,1,30,mps,0.8883,0.0672,0.02567,2.617
+sheet_metal,2,30,mps,0.8837,0.08851,0.02611,3.39
+can,0,48,mps,0.915,0.05811,0.01942,2.993
+can,1,48,mps,0.9093,0.05737,0.01997,2.873
+can,2,48,mps,0.8889,0.04791,0.01788,2.68

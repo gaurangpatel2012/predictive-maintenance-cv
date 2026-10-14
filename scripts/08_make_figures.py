@@ -437,7 +437,7 @@ def fig5_4(cfg, figures: Path) -> None:
         a1.set_ylim(0, mx * 1.12)
         a1.set_ylabel("latency (ms)", fontsize=6.7)
         a1.set_title("End-to-end latency, rolling median of 25", loc="left", fontsize=7.2)
-        a2.set_ylabel("Δ memory (MB)", fontsize=6.7)
+        a2.set_ylabel("Δ memory (MiB)", fontsize=6.7)
         a2.set_title("Resident memory vs images 5–15", loc="left", fontsize=7.2)
         a2.axhline(0, color=INK2, linewidth=0.5)
         fig.legend(handles=model_handles(models), ncol=len(models), loc="lower center", bbox_to_anchor=(0.5, 0.0),
