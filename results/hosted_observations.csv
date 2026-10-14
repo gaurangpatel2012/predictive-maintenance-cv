@@ -1,0 +1,7 @@
+timestamp_utc,situation,image,decision,score,threshold,response_ms,model_load_ms,upload_to_decision_s,resident_mib,host
+2026-10-14T06:46:25,after 12 h without visits; app not suspended; model already resident,bad/004_regular.png,REJECT,28.34,22.73,267,,4.0,838,Streamlit Community Cloud (CPU)
+2026-10-14T06:46:25,after 12 h without visits; app not suspended; model already resident,good/000_regular.png,PASS,22.68,22.73,197,,,838,Streamlit Community Cloud (CPU)
+2026-10-14T06:51:34,model already resident (reboot not yet effective),bad/004_regular.png,REJECT,28.34,22.73,177,,3.9,933,Streamlit Community Cloud (CPU)
+2026-10-14T06:51:34,model already resident (reboot not yet effective),good/000_regular.png,PASS,22.68,22.73,285,,,793,Streamlit Community Cloud (CPU)
+2026-10-14T06:55:45,first request after a reboot of the app: weights downloaded and loaded,bad/004_regular.png,REJECT,28.34,22.73,172,7397,11.4,571,Streamlit Community Cloud (CPU)
+2026-10-14T06:55:45,second request after the reboot,good/000_regular.png,PASS,22.68,22.73,164,,,727,Streamlit Community Cloud (CPU)
